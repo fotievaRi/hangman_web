@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hangman</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.col-xs-push-0">
+    <!-- Bootstrap core CSS -->
+    <link href="./styles/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="./styles/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="./styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Hangman</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <div class="navbar-nav mr-auto smooth-scroll">
+                    <a class="nav-item">
+                        <a href="index.html" class="nav-link waves-effect waves-light">Home</a>
+                    </a>
+                </div>
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href ="/profile" class="navbar-link waves-effect waves-light">
+                            <i class="fa fa-address-card-o"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="intro" class="view">
+        <div class="mask rgba-black-strong">
+            <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+                <div class="row d-flex justify-content-center text-center">
+                    <div class="col-md-12">
+                        <div class="profile-sidebar">
+                            <h2 class="display-6 font-weight-bold white-text pt-5 mb-4">
+                                Пожалуйста, войдите
+                            </h2>
+                            <div class="card card-signin my-5">
+                                <div class="card-body">
+                                    <!--<h5 class="card-title text-center">Вход</h5>-->
+                                    <!--<form class="form-signin" action="/login" method="post">-->
+                                    <!--<div class="form-label-group">-->
+                                    <!--<input type="text" name="username" class="form-control" placeholder="Email address" required autofocus>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="form-label-group">-->
+                                    <!--<input type="text" name="password" class="form-control" placeholder="Password" required>-->
+                                    <!--</div>-->
+                                    <!--<input type="hidden" name="_csrf" value="{{_csrf.token}}" />-->
+                                    <!--&lt;!&ndash;<a href ="/game" class="navbar-link waves-effect waves-light">&ndash;&gt;-->
+                                    <!--<div><input type="submit" value="Вход"/></div>-->
+                                    <!--&lt;!&ndash;<button class="btn btn-lg btn-primary btn-block text-uppercase" <input type="submit"/>Вход</button>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+
+                                    <!--&lt;!&ndash;<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Регистрация</button>&ndash;&gt;-->
+                                    <!--</form>-->
+                                    <form action="login" method="post">
+                                        <div><label> User Name : <input type="text" name="username"/> </label></div>
+                                        <div><label> Password: <input type="password" name="password"/> </label></div>
+                                        <div><input type="submit" value="login" name="login"></div>
+                                    </form>
+                                    <h2 class="display-6 font-weight-bold white-text pt-5 mb-4">
+                                        Это Ваша первая игра?
+                                    </h2>
+                                    <a href = "registration.html" class="navbar-link waves-effect waves-light">
+                                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Зарегистрироваться</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="./js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="./js/mdb.min.js"></script>
+</body>
+</html>

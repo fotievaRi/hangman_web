@@ -8,9 +8,9 @@ window.onload = function () {
     var chosenCategory;     // Selected category
     var word ;              // Selected word
     var guess ;             // Guess
-    var geusses = [ ];      // Stored geusses
+    var guesses = [ ];      // Stored guesses
     var lives ;             // Lives
-    var counter ;           // Count correct geusses
+    var counter ;           // Count correct guesses
     var space;              // Number of spaces in word '-'
 
     // Get elements
@@ -48,7 +48,7 @@ window.onload = function () {
         }
     }
 
-    // Create geusses ul
+    // Create guesses ul
     result = function () {
         wordHolder = document.getElementById('hold');
         correct = document.createElement('ul');
@@ -64,7 +64,7 @@ window.onload = function () {
                 guess.innerHTML = "_";
             }
 
-            geusses.push(guess);
+            guesses.push(guess);
             wordHolder.appendChild(correct);
             correct.appendChild(guess);
         }
@@ -72,13 +72,13 @@ window.onload = function () {
 
     // Show lives
     comments = function () {
-        showLives.innerHTML = "У вас  " + lives + "жизней";
+        showLives.innerHTML = "У вас  " + lives + " жизней";
         if (lives < 1) {
             showLives.innerHTML = "Игра закончена";
             document.getElementById('score').value='-5';
         }
-        for (var i = 0; i < geusses.length; i++) {
-            if (counter + space === geusses.length) {
+        for (var i = 0; i < guesses.length; i++) {
+            if (counter + space === guesses.length) {
                 showLives.innerHTML = "Вы выиграли!";
                 document.getElementById('score').value='10';
             }
@@ -164,7 +164,7 @@ window.onload = function () {
             this.onclick = null;
             for (var i = 0; i < word.length; i++) {
                 if (word[i] === geuss) {
-                    geusses[i].innerHTML = geuss;
+                    guesses[i].innerHTML = geuss;
                     counter += 1;
                 }
             }
@@ -195,7 +195,7 @@ window.onload = function () {
         console.log(word);
         buttons();
 
-        geusses = [ ];
+        guesses = [ ];
         lives = 10;
         counter = 0;
         space = 0;

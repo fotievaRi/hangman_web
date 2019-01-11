@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="utf-8">
@@ -7,14 +7,14 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Hangman</title>
   <!-- Font Awesome -->
-  <link rel="stylesheet" th:href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.col-xs-push-0">
   <!-- Bootstrap core CSS -->
-  <link th:href="./styles/bootstrap.min.css" rel="stylesheet">
+  <link href="./styles/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link th:href="./styles/mdb.min.css" rel="stylesheet">
+  <link href="./styles/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
-  <!--<link th:href="../static/css/game.css" rel="stylesheet">-->
-  <link th:href="./styles/index.css" rel="stylesheet">
+  <link href="./styles/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,20 +22,15 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
     <div class="container">
-      <a href="/" class="navbar-brand">Hangman</a>
+      <a href="index.html" class="navbar-brand">Hangman</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle Navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="basicExampleNav">
-        <ul class="navbar-nav nav-flex-icons">
-          <li class="nav-item">
-            <a href ="login.html" class="navbar-link waves-effect waves-light"> Войти в систему
-              <i class="fa fa-address-card-o"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <a href="login.html" class="navbar-brand">Войти</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
   </nav>
 
@@ -48,9 +43,8 @@
               Hangman
             </h2>
             <hr class="hr-light">
-            <h4 class="white-text my-4">Мы представляем Вам игру "Hangman" или в простом понимании "Виселица". Это классическая популярная во всем мире игра, в которой вам необходимо отгадать скрытое слово по буквам. Непосредственно перед игрой вы выбираете тему, на которую будет загадано ключевое слово. Принадлежность слова к выбранной теме, количество букв в слове, а также открываемые буквы - все это должно навести вас на мысль о правильном ответе. Во время игры возможны 6 неправильных ответов.<p> Всем игрокам, которые угадают слово, начисляются призовые баллы, которые учитываются в таблице рекордов. <p> Стань лучшим! <p><p>P.S. мы любим котиков, ты скоро в этом убедишься!
+            <h4 class="white-text my-4">Мы представляем Вам игру "Hangman" или в простом понимании "Виселица". Это классическая популярная во всем мире игра, в которой вам необходимо отгадать скрытое слово по буквам. Тема выбирается автоматически. Принадлежность слова к выбранной теме, количество букв в слове, а также открываемые буквы - все это должно навести вас на мысль о правильном ответе. Во время игры возможны 10 неправильных ответов.<p> Всем игрокам, которые угадают слово, начисляются призовые баллы, которые учитываются в таблице рекордов. <p> Стань лучшим!
             </h4>
-            <button class="btn btn-outline-white waves-effect waves waves-light">Играть! <i class="fa fa-trophy"></i></button>
           </div>
         </div>
       </div>
@@ -63,31 +57,16 @@
     <div class="container">
       <div class="row py-4 d-flex align-items-center">
         <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-          <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+          <h6 class="mb-0 white-text"> <p>Get connected with us on social networks! </p> <p> Мы студентки группы 5621 Рита и Аня. Мы решили создать данную игру в качестве курсовой работы, но сделать при этом ее более веселой и интересной! </p> <p> Надеемся, что вам будет интересно играть и соревноваться с другими пользователями!</p></h6>
         </div>
         <div class="col-md-6 col-lg-7 text-center text-md-right">
-          <a href="#" class="fb-ic ml-0">
+          <a href="https://vk.com/margo2917" class="fb-ic ml-0">
             <i class="fa fa-vk white-text mr-4"></i>
           </a>
-          <a href="#" class="fb-ic ml-0">
-            <i class="fa fa-telegram white-text mr-4"></i>
+          <a href="https://vk.com/saturn_princess" class="fb-ic ml-0">
+             <i class="fa fa-share-square-o" aria-hidden="true"></i>
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container mt-5 mb-4 text-center text-center">
-    <div class="row mt-3">
-      <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-        <h6 class="text uppercase font-weight-bold"><strong>Our team</strong></h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>Добро пожаловать! Мы студентки группы 5621 Рита и Аня. Мы решили создать данную игру в качетсве курсовой работы, но сделать при этом ее более веселой и интересной! <p> Надеемся, что вам будет интересно играть и соревноваться с другими пользователями.<p>
-      </div>
-      <div class="col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
-        <h6 class="text uppercase font-weight-bold"><strong>Projects</strong></h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p> Пока что мы ещё студенты и не реализовывали крупных проектов, но мы будем рады, если вы поможете нам в нашем развитии. <p>
       </div>
     </div>
   </div>
@@ -102,5 +81,5 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="./js/mdb.min.js"></script>
 </body>
-
 </html>
+

@@ -1,4 +1,4 @@
-body {
-    background: url("../img/maincat.jpeg") no-repeat fixed;
+html, body, header, #intro{
+    background: url(../img/fon2.jpeg) no-repeat fixed;
     background-size: cover;
 }

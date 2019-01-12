@@ -16,6 +16,7 @@ window.onload = function () {
     // Get elements
     var showLives = document.getElementById("mylives");
     var showCatagory = document.getElementById("catagoryName");
+    var score = document.getElementById("score");
 
     // create alphabet ul
     var buttons = function () {
@@ -75,12 +76,26 @@ window.onload = function () {
         showLives.innerHTML = "У вас  " + lives + " жизней";
         if (lives < 1) {
             showLives.innerHTML = "Игра закончена";
-            document.getElementById('score').value='-5';
+            score.setAttribute('value','5');
+            score.innerHTML="У вас убавилось "+ score.getAttribute('value') + " очков";
+
+            var xhr = new XMLHttpRequest();
+            var data = 'score=5';
+            xhr.open("POST", 'profile', true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send(data)
         }
         for (var i = 0; i < guesses.length; i++) {
             if (counter + space === guesses.length) {
                 showLives.innerHTML = "Вы выиграли!";
-                document.getElementById('score').value='10';
+                score.setAttribute('value','10');
+                score.innerHTML="Вы получили "+ score.getAttribute('value')+ " очков";
+
+                var xhr = new XMLHttpRequest();
+                var data = 'score=10';
+                xhr.open("POST", 'profile', true);
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhr.send(data);
             }
         }
     }
@@ -208,6 +223,7 @@ window.onload = function () {
     play();
     // Reset
     document.getElementById('reset').onclick = function() {
+        score.innerHTML="";
         correct.parentNode.removeChild(correct);
         letters.parentNode.removeChild(letters);
         context.clearRect(0, 0, 400, 400);

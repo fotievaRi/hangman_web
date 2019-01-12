@@ -1,0 +1,4 @@
+admin 10
+kakashka 30
+rita 25
+suka -5

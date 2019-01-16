@@ -39,4 +39,13 @@
         <servlet-name>RegistrationServlet</servlet-name>
         <url-pattern>/registration</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
 </web-app>

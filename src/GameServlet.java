@@ -31,7 +31,7 @@ public class GameServlet extends HttpServlet {
             request.getRequestDispatcher("game.html").forward(request, response);
         }
         else{
-            out.print("Please login first");
+            out.print("Please, login first");
             request.getRequestDispatcher("login.html").include(request, response);
         }
 

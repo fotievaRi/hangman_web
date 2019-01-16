@@ -8,11 +8,13 @@ import java.util.logging.Logger;
 
 public class RegistrationServlet extends HttpServlet {
     DataBase dataBase= new DataBase();
+    ScoreBase scoreBase;
     Logger logger = Logger.getLogger(RegistrationServlet.class.getName());
 
     @Override
     public void init(){
         try {
+            scoreBase=new ScoreBase();
             dataBase.readFile();
         }
         catch (IOException e){
@@ -30,6 +32,7 @@ public class RegistrationServlet extends HttpServlet {
         if(registration!=null){
             if(!dataBase.checkName(name)) {
                 dataBase.addData(name, password);
+                scoreBase.addNewUser(name);
                 out.println("Welcome, " + name);
                 request.getRequestDispatcher("/login.html").forward(request, response);
             }

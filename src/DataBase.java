@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class DataBase {
-    private String path="/home/margarita/IdeaProjects/hangman_web/src/resource/data.txt";
+    private String path="/home/margarita/hangman_web/src/resource/data.txt";
     private HashMap<String, String> dataList = new HashMap<>();
     private Logger logger= Logger.getLogger(DataBase.class.getName());
 

@@ -1,0 +1,16 @@
+language: java
+jdk: oraclejdk8
+sudo: required
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - docker build -t FotievaRi/hangman_web .
+- docker push FotievaRi/hangman_web
